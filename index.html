@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="tr" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <!-- the page has its own TR | EN switch, so tell the browser not to auto-translate it -->
+    <meta name="google" content="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Semiha Sekerli's Book Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Little drawings and symbols used around the page. Invisible on its own. -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <symbol id="hrt" viewBox="0 0 24 24">
+            <path d="M12 20.5C6.4 16.6 3.5 13.2 3.5 10a4.4 4.4 0 0 1 8.5-1.6A4.4 4.4 0 0 1 20.5 10c0 3.2-2.9 6.6-8.5 10.5Z" fill="currentColor"></path>
+        </symbol>
+        <symbol id="hrt-o" viewBox="0 0 24 24">
+            <path d="M12 20.5C6.4 16.6 3.5 13.2 3.5 10a4.4 4.4 0 0 1 8.5-1.6A4.4 4.4 0 0 1 20.5 10c0 3.2-2.9 6.6-8.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"></path>
+        </symbol>
+        <symbol id="star" viewBox="0 0 24 24">
+            <path d="M12 2.5 14.6 9 21.5 9.4l-5.3 4.4 1.7 6.7L12 16.9 6.1 20.5l1.7-6.7L2.5 9.4 9.4 9Z" fill="currentColor"></path>
+        </symbol>
+        <symbol id="spark" viewBox="0 0 24 24">
+            <path d="M12 1.5c.7 5.4 3.4 8.1 8.8 8.8-5.4.7-8.1 3.4-8.8 8.8-.7-5.4-3.4-8.1-8.8-8.8 5.4-.7 8.1-3.4 8.8-8.8Z" fill="currentColor"></path>
+        </symbol>
+        <symbol id="squig" viewBox="0 0 24 12">
+            <path d="M1 7c3-6 5 6 8 0s5 6 8 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"></path>
+        </symbol>
+    </svg>
+
+    <div class="wrap">
+
+        <!-- ============ HEADER ============ -->
+        <header class="board">
+
+            <!-- the TR | EN switch in the top corner -->
+            <div class="lang" role="group" aria-label="Dil / Language">
+                <button type="button" data-lang="tr" aria-pressed="true">TR</button>
+                <button type="button" data-lang="en" aria-pressed="false">EN</button>
+            </div>
+
+            <div class="doodles" aria-hidden="true">
+                <svg class="d1" viewBox="0 0 24 24"><use href="#star"></use></svg>
+                <svg class="d2" viewBox="0 0 24 24"><use href="#spark"></use></svg>
+                <svg class="d3" viewBox="0 0 24 12"><use href="#squig"></use></svg>
+                <svg class="d4" viewBox="0 0 24 24"><use href="#hrt"></use></svg>
+                <svg class="d5" viewBox="0 0 24 24"><use href="#star"></use></svg>
+            </div>
+
+            <!-- the sleeping cat on a stack of books -->
+            <div class="sticker">
+                <svg class="mark" viewBox="0 0 96 84" aria-hidden="true">
+                    <path class="hrt" d="M14,19 c-4.6,-3.1 -6.9,-6.1 -6.9,-8.7 a3.45,3.45 0 0 1 6.9,-1.5 a3.45,3.45 0 0 1 6.9,1.5 c0,2.6 -2.3,5.6 -6.9,8.7 z"></path>
+                    <rect class="b3" x="14" y="66" width="68" height="9" rx="3.5"></rect>
+                    <rect class="b2" x="20" y="57" width="58" height="9" rx="3.5"></rect>
+                    <rect class="b1" x="17" y="48" width="62" height="9" rx="3.5"></rect>
+                    <g class="kitty">
+                        <path class="line" d="M29,45 C17,47 14,35 22.5,31.5 C26.5,29.8 29.5,31.5 29.5,34"></path>
+                        <ellipse class="cat" cx="48" cy="38" rx="22" ry="10.5"></ellipse>
+                        <path class="ear" d="M57.5,23.5 L58.5,14 L65,20 Z"></path>
+                        <path class="ear" d="M65.5,19.5 L71.5,13.5 L72.5,22.5 Z"></path>
+                        <circle class="cat" cx="64" cy="30.5" r="9.5"></circle>
+                        <path class="line" d="M58.6,29.6 q2.2,2.4 4.4,0"></path>
+                        <path class="line" d="M65.8,29.6 q2.2,2.4 4.4,0"></path>
+                        <path class="line" d="M63.3,34.2 l1.3,1.2 l1.3,-1.2"></path>
+                        <path class="line" d="M36,36.5 q3,-2 6,0" opacity=".45"></path>
+                        <path class="line" d="M43,41.5 q3,-2 6,0" opacity=".45"></path>
+                    </g>
+                </svg>
+            </div>
+
+            <div class="name-tape"><span data-i18n="nameTape">Dr. Semiha Sekerli'nin</span></div>
+
+            <!-- the cut-out magazine letters -->
+            <h1 class="cutout" aria-label="Book Club">
+                <span class="ltr t1" aria-hidden="true">B</span>
+                <span class="ltr t2" aria-hidden="true">O</span>
+                <span class="ltr t3" aria-hidden="true">O</span>
+                <span class="ltr t4" aria-hidden="true">K</span>
+                <span class="gap" aria-hidden="true"></span>
+                <span class="ltr t5" aria-hidden="true">C</span>
+                <span class="ltr t6" aria-hidden="true">L</span>
+                <span class="ltr t1" aria-hidden="true">U</span>
+                <span class="ltr t3" aria-hidden="true">B</span>
+            </h1>
+
+            <!-- the words in this header change with the TR | EN switch (see script.js) -->
+            <p class="lede" data-i18n="lede"></p>
+
+            <div class="tally" id="tally"></div>
+
+            <button type="button" class="add" id="addBtn" data-i18n="add" hidden></button>
+        </header>
+
+        <!-- ============ THE BOOKS ============ -->
+        <!-- This fills itself from books.js — don't type books in here. -->
+        <main class="shelf" id="shelf"></main>
+
+        <section class="empty" id="empty" hidden>
+            <svg width="38" height="38" viewBox="0 0 24 24" aria-hidden="true" style="color:var(--line-strong)"><use href="#hrt-o"></use></svg>
+            <h2 data-i18n="emptyHead"></h2>
+            <p data-i18n="emptyText"></p>
+        </section>
+
+        <footer>
+            <span data-i18n="footerKept"></span>
+            <span>·</span>
+            <span data-i18n="footerHearts"></span>
+        </footer>
+
+    </div>
+
+    <!-- ============ THE "ADD / EDIT A BOOK" FORM ============ -->
+    <!-- Hidden until you press "+ Kitap ekle" or "Düzenle". -->
+    <dialog class="form" id="bookForm" aria-labelledby="formHead">
+        <form id="bookFormInner" novalidate>
+            <span class="tape" aria-hidden="true"></span>
+            <h2 id="formHead"></h2>
+
+            <div class="form-row">
+                <label class="field"><span data-i18n="fTitle"></span><input type="text" id="fTitle" autocomplete="off"></label>
+                <label class="field"><span data-i18n="fTitleEn"></span><input type="text" id="fTitleEn" lang="en" autocomplete="off"></label>
+            </div>
+
+            <div class="form-row">
+                <label class="field"><span data-i18n="fAuthor"></span><input type="text" id="fAuthor" autocomplete="off"></label>
+                <label class="field"><span data-i18n="fStatus"></span>
+                    <select id="fStatus">
+                        <option value="reading" data-i18n="rack_reading"></option>
+                        <option value="finished" data-i18n="rack_finished"></option>
+                        <option value="soon" data-i18n="rack_soon"></option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="form-row">
+                <fieldset class="field"><legend data-i18n="fHearts"></legend><div class="pick-hearts" id="fHearts"></div></fieldset>
+                <fieldset class="field"><legend data-i18n="fColour"></legend><div class="swatches" id="fColour"></div></fieldset>
+            </div>
+
+            <label class="field"><span data-i18n="fNoteTr"></span><textarea id="fNote" lang="tr"></textarea></label>
+            <label class="field"><span data-i18n="fNoteEn"></span><textarea id="fNoteEn" lang="en"></textarea></label>
+            <p class="hint" data-i18n="fNoteHint"></p>
+            <p class="hint first" id="firstTime" data-i18n="firstTime" hidden></p>
+            <p class="form-msg" id="formMsg" role="alert"></p>
+
+            <div class="form-actions">
+                <button type="button" class="del" id="delBtn" data-i18n="del"></button>
+                <button type="button" class="say" id="cancelBtn" data-i18n="cancel"></button>
+                <button type="submit" class="add" id="saveBtn" data-i18n="save"></button>
+            </div>
+        </form>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <!-- books.js must load FIRST, so script.js has the books to show -->
+    <script src="books.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

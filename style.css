@@ -1,0 +1,406 @@
+/* ============================================================
+   MY BOOK CLUB — all the colours, fonts and layout live here.
+   The colours are listed once at the top so they're easy to change.
+   ============================================================ */
+
+:root{
+  /* --- the page --- */
+  --bg:#FDF4F2;          /* paper background */
+  --dot:#EFD3D8;         /* the little dots on the paper */
+  --surface:#FFFFFF;     /* cards */
+  --surface-2:#FBEDF0;   /* soft pink fill inside cards */
+
+  /* --- text --- */
+  --ink:#3B2831;
+  --ink-soft:#7B6470;
+  --ink-faint:#A99099;
+
+  /* --- pink, the main colour --- */
+  --pink:#E9558A;
+  --pink-soft:#FBDCE7;
+  --pink-deep:#C93A70;
+
+  /* --- the other sticker colours --- */
+  --butter:#F5C044;
+  --mint:#6FC5A0;
+  --sky:#6FA8DC;
+  --lilac:#B98AD6;
+  --coral:#F28B6B;
+
+  --line:#F2DCE1;
+  --line-strong:#E3C2CB;
+  --tape:rgba(233,85,138,.30);
+  --tape-2:rgba(233,85,138,.16);
+
+  --shadow:0 2px 3px rgba(59,40,49,.06), 0 12px 28px -16px rgba(59,40,49,.3);
+  --shadow-lift:0 3px 6px rgba(59,40,49,.1), 0 22px 44px -22px rgba(59,40,49,.42);
+  --radius:20px;
+
+  --font-cut:"Fredoka","Trebuchet MS",system-ui,sans-serif;
+  --font-hand:"Caveat","Segoe Script","Comic Sans MS",cursive;
+  --font-body:"Nunito","Segoe UI",system-ui,-apple-system,sans-serif;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  color:var(--ink);
+  font-family:var(--font-body);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  background-color:var(--bg);
+  background-image:radial-gradient(circle, var(--dot) 1.3px, transparent 1.4px);
+  background-size:24px 24px;
+}
+
+.wrap{max-width:1020px;margin:0 auto;padding-inline:20px;padding-block:0 80px}
+h1,h2,h3{margin:0;text-wrap:balance}
+p{margin:0}
+a{color:var(--pink-deep)}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px;border-radius:8px}
+
+/* washi tape strips */
+.tape{
+  position:absolute;
+  background:repeating-linear-gradient(45deg,var(--tape) 0 7px,var(--tape-2) 7px 14px);
+  border-radius:2px;
+  pointer-events:none;
+}
+
+/* ============ THE HEADER ============ */
+
+.board{position:relative;padding-block:48px 38px;display:grid;gap:18px;justify-items:center;text-align:center}
+.doodles{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.doodles svg{position:absolute;opacity:.9}
+.d1{top:12px;left:4%;width:26px;color:var(--butter);transform:rotate(-12deg)}
+.d2{top:58px;right:6%;width:22px;color:var(--mint);transform:rotate(14deg)}
+.d3{bottom:26px;left:9%;width:20px;color:var(--sky);transform:rotate(8deg)}
+.d4{top:26px;right:16%;width:18px;color:var(--pink);transform:rotate(-20deg)}
+.d5{bottom:8px;right:10%;width:24px;color:var(--lilac);transform:rotate(6deg)}
+@media (max-width:620px){.d2,.d4,.d5{display:none}}
+
+.sticker{
+  position:relative;background:var(--surface);border-radius:50%;
+  padding:10px;box-shadow:var(--shadow);transform:rotate(-4deg);
+}
+.mark{width:96px;height:84px;display:block;overflow:visible}
+.mark .cat{fill:var(--surface-2);stroke:var(--ink);stroke-width:2.2;stroke-linejoin:round}
+.mark .line{fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.mark .ear{fill:var(--pink-soft);stroke:var(--ink);stroke-width:2.2;stroke-linejoin:round}
+.mark .b1{fill:var(--butter)}
+.mark .b2{fill:var(--mint)}
+.mark .b3{fill:var(--pink)}
+.mark .hrt{fill:var(--pink)}
+.mark .kitty{transform-origin:48px 44px;animation:breathe 4.4s ease-in-out infinite}
+.mark .hrt{transform-origin:14px 12px;animation:float 3.4s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}
+@keyframes float{0%,100%{transform:translateY(0);opacity:.85}50%{transform:translateY(-4px);opacity:1}}
+@media (prefers-reduced-motion: reduce){.mark .kitty,.mark .hrt{animation:none}}
+
+.name-tape{
+  position:relative;padding:9px 30px 8px;
+  background:repeating-linear-gradient(45deg,var(--tape) 0 8px,var(--tape-2) 8px 16px);
+  transform:rotate(-1.6deg);border-radius:3px;
+}
+.name-tape span{
+  font-family:var(--font-hand);font-size:clamp(22px,4vw,30px);
+  font-weight:700;color:var(--ink);line-height:1;display:block;
+}
+
+/* the cut-out magazine letters */
+.cutout{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 5px;padding-top:4px;max-width:100%}
+.cutout .gap{width:16px}
+.ltr{
+  font-family:var(--font-cut);font-weight:600;
+  font-size:clamp(30px,7.4vw,58px);line-height:1;
+  padding:.16em .2em .2em;border-radius:8px;
+  background:var(--tile);color:var(--on);
+  box-shadow:0 2px 0 rgba(0,0,0,.1), 0 6px 14px -8px rgba(59,40,49,.6);
+  display:inline-block;
+}
+.t1{--tile:#E9558A;--on:#fff}
+.t2{--tile:#F5C044;--on:#3B2831}
+.t3{--tile:#6FC5A0;--on:#25392F}
+.t4{--tile:#6FA8DC;--on:#fff}
+.t5{--tile:#B98AD6;--on:#fff}
+.t6{--tile:#F28B6B;--on:#fff}
+.ltr:nth-child(3n+1){transform:rotate(-4deg)}
+.ltr:nth-child(3n+2){transform:rotate(3deg);border-radius:8px 16px 8px 14px}
+.ltr:nth-child(3n+3){transform:rotate(-1.5deg);border-radius:16px 8px 14px 8px}
+.ltr:nth-child(4n){transform:rotate(5deg)}
+
+.lede{
+  max-width:50ch;color:var(--ink-soft);font-size:16.5px;
+  background:var(--surface);border-radius:18px;padding:14px 20px;
+  box-shadow:var(--shadow);transform:rotate(.5deg);border:1.5px solid var(--line);
+}
+.tally{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;padding-top:2px}
+.tally span{
+  font-weight:700;font-size:13px;color:var(--ink-soft);
+  background:var(--surface);border:1.5px solid var(--line);border-radius:999px;
+  padding:6px 15px;box-shadow:var(--shadow);
+}
+.tally span:nth-child(1){transform:rotate(-2deg)}
+.tally span:nth-child(2){transform:rotate(1.5deg)}
+.tally span:nth-child(3){transform:rotate(-1deg)}
+.tally b{color:var(--pink-deep);font-weight:800;font-variant-numeric:tabular-nums}
+
+/* ============ THE SHELVES ============ */
+
+.shelf{display:grid;gap:46px}
+.rack{display:grid;gap:24px}
+.rack-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.rack-head h2{
+  position:relative;font-family:var(--font-hand);font-weight:700;
+  font-size:28px;line-height:1;color:var(--ink);
+  background:repeating-linear-gradient(45deg,var(--tape) 0 8px,var(--tape-2) 8px 16px);
+  padding:8px 20px 6px;border-radius:3px;transform:rotate(-1.4deg);
+}
+.rack-head .count{
+  font-weight:800;font-size:12.5px;color:#fff;background:var(--pink);
+  border-radius:999px;padding:4px 12px;font-variant-numeric:tabular-nums;
+  transform:rotate(3deg);box-shadow:var(--shadow);
+}
+
+.book{
+  position:relative;background:var(--surface);
+  border:1.5px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  display:grid;grid-template-columns:138px 1fr;gap:26px;
+  padding:28px 24px 24px;align-items:start;
+}
+.rack .book:nth-child(odd){transform:rotate(-.55deg)}
+.rack .book:nth-child(even){transform:rotate(.5deg)}
+.book > .tape{top:-9px;left:34px;width:96px;height:22px;transform:rotate(-2.5deg)}
+
+/* the drawn cover */
+.cover{
+  position:relative;width:100%;max-width:100%;aspect-ratio:2/3;
+  border-radius:4px 12px 12px 4px;padding:18px 14px 14px 19px;
+  display:flex;flex-direction:column;gap:9px;
+  color:#fff;box-shadow:var(--shadow-lift);overflow:hidden;
+}
+.cover::before{
+  content:"";position:absolute;inset:0 auto 0 0;width:10px;
+  background:rgba(0,0,0,.26);box-shadow:inset -1px 0 0 rgba(255,255,255,.2);
+}
+.cover .ribbon{
+  position:absolute;top:-2px;right:16px;width:13px;height:34px;background:var(--butter);
+  clip-path:polygon(0 0,100% 0,100% 100%,50% 76%,0 100%);
+}
+.cover .rule{height:2px;background:rgba(255,255,255,.5);width:26px;border-radius:2px;flex:none}
+.cover .c-title{font-family:var(--font-cut);font-size:14.5px;line-height:1.2;font-weight:600;overflow-wrap:anywhere}
+.cover .c-author{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.88;margin-top:auto;overflow-wrap:anywhere}
+
+.book-main{display:grid;gap:13px;min-width:0}
+.book-top{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center}
+.book h3{font-family:var(--font-cut);font-weight:600;font-size:25px;line-height:1.18}
+.byline{font-family:var(--font-hand);font-size:20px;font-weight:600;color:var(--ink-soft);line-height:1.1}
+.chip{
+  font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;
+  padding:5px 12px;border-radius:999px;background:var(--pink);color:#fff;
+  white-space:nowrap;transform:rotate(-2deg);
+}
+
+.rating{display:flex;gap:3px;align-items:center}
+.rating svg{width:19px;height:19px}
+.rating .on{color:var(--pink)}
+.rating .off{color:var(--line-strong)}
+.rating .label{font-family:var(--font-hand);font-size:17px;font-weight:600;color:var(--ink-faint);margin-left:8px}
+
+.note{
+  font-size:16px;line-height:1.64;color:var(--ink);max-width:64ch;
+  background:var(--surface-2);border-radius:4px 18px 18px 18px;padding:15px 19px;
+}
+.note.empty{
+  color:var(--ink-faint);font-family:var(--font-hand);font-size:19px;
+  background:transparent;border:2px dashed var(--line-strong);
+}
+
+/* the "email me" button under each book */
+.say{
+  display:inline-block;justify-self:start;text-decoration:none;
+  font-family:var(--font-body);font-size:13px;font-weight:800;
+  border-radius:999px;border:2px solid var(--line-strong);
+  background:var(--surface);color:var(--ink);padding:8px 18px;
+  transition:background .15s,border-color .15s,color .15s;
+}
+.say:hover{background:var(--pink);border-color:var(--pink);color:#fff}
+
+/* "Tell me what you thought" + "Düzenle" sit side by side */
+.card-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.edit{
+  font-family:var(--font-body);font-size:13px;font-weight:800;cursor:pointer;
+  border-radius:999px;border:2px dashed var(--line-strong);
+  background:transparent;color:var(--ink-soft);padding:7px 16px;
+}
+.edit:hover{border-color:var(--pink);color:var(--pink-deep)}
+
+.say{cursor:pointer}
+.say[aria-expanded="true"]{background:var(--pink);border-color:var(--pink);color:#fff}
+
+/* the private note a reader sends (opens under the buttons) */
+.note-form{
+  display:grid;gap:12px;max-width:64ch;
+  background:var(--surface-2);border:2px dashed var(--line-strong);
+  border-radius:4px 18px 18px 18px;padding:16px 18px;
+}
+.note-form[hidden]{display:none}
+.note-form textarea{min-height:90px}
+.note-form .add{justify-self:start;font-size:15px;padding:8px 20px}
+.note-form .form-row{grid-template-columns:1fr 1fr;align-items:end}
+.note-form .field input,.note-form .field textarea{background:var(--surface)}
+.honey{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.thanks{font-family:var(--font-hand);font-size:22px;font-weight:700;color:var(--pink-deep)}
+.two-racks .note-form .form-row{grid-template-columns:1fr}
+
+/* the small line under a note shown in the other language */
+.note-tag{display:block;margin-top:6px;font-family:var(--font-hand);font-size:17px;color:var(--ink-faint)}
+
+/* ============ TWO COLUMNS: read (left) + reading list (right) ============ */
+
+.two-racks{display:grid;grid-template-columns:1fr 1fr;gap:46px 30px;align-items:start}
+.two-racks .rack{min-width:0}
+.two-racks .book{grid-template-columns:96px 1fr;gap:18px;padding:26px 18px 20px}
+.two-racks .book h3{font-size:21px}
+.two-racks .cover{padding:14px 10px 10px 15px}
+.two-racks .cover .c-title{font-size:12px}
+.two-racks .cover .c-author{font-size:8.5px}
+.two-racks .book > .tape{left:22px;width:74px}
+.rack-empty{
+  font-family:var(--font-hand);font-size:20px;color:var(--ink-faint);text-align:center;
+  border:2px dashed var(--line-strong);border-radius:var(--radius);padding:26px 16px;
+}
+@media (max-width:860px){.two-racks{grid-template-columns:1fr}}
+
+/* ============ TR | EN SWITCH ============ */
+
+.lang{
+  position:absolute;top:14px;right:0;z-index:2;display:flex;gap:2px;
+  background:var(--surface);border:1.5px solid var(--line);border-radius:999px;
+  padding:3px;box-shadow:var(--shadow);transform:rotate(2deg);
+}
+.lang button{
+  font-family:var(--font-body);font-size:12.5px;font-weight:800;letter-spacing:.06em;
+  border:0;background:transparent;color:var(--ink-soft);
+  padding:5px 12px;border-radius:999px;cursor:pointer;
+}
+.lang button[aria-pressed="true"]{background:var(--pink);color:#fff}
+
+/* ============ "+ KİTAP EKLE" BUTTON ============ */
+
+.add{
+  font-family:var(--font-cut);font-weight:600;font-size:17px;cursor:pointer;
+  background:var(--pink);color:#fff;border:0;border-radius:999px;
+  padding:10px 24px;box-shadow:var(--shadow);transform:rotate(-1.5deg);
+  transition:background .15s;
+}
+.add:hover{background:var(--pink-deep)}
+.add:disabled{opacity:.6;cursor:wait}
+.add[hidden]{display:none}
+
+/* ============ THE ADD / EDIT FORM ============ */
+
+dialog.form{
+  border:0;padding:0;border-radius:var(--radius);
+  width:calc(100% - 32px);max-width:600px;max-height:calc(100vh - 32px);overflow:auto;
+  background:var(--surface);color:var(--ink);box-shadow:var(--shadow-lift);
+}
+dialog.form::backdrop{background:rgba(59,40,49,.38)}
+.form form{position:relative;display:grid;gap:16px;padding:34px 26px 24px}
+.form form > .tape{top:0;left:40px;width:96px;height:20px;transform:rotate(-2deg)}
+.form h2{
+  justify-self:start;font-family:var(--font-hand);font-weight:700;font-size:30px;line-height:1;
+  background:repeating-linear-gradient(45deg,var(--tape) 0 8px,var(--tape-2) 8px 16px);
+  padding:8px 20px 6px;border-radius:3px;transform:rotate(-1.4deg);
+}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:grid;gap:6px;margin:0;padding:0;border:0;min-width:0}
+.field > span,.field > legend{font-weight:800;font-size:13.5px;color:var(--ink-soft);padding:0;margin-bottom:6px}
+.field input,.field select,.field textarea{
+  font-family:var(--font-body);font-size:16px;color:var(--ink);width:100%;
+  background:var(--surface-2);border:1.5px solid var(--line-strong);border-radius:12px;padding:10px 14px;
+}
+.field textarea{min-height:110px;resize:vertical;line-height:1.55}
+.field input:focus,.field select:focus,.field textarea:focus{outline:3px solid var(--pink);outline-offset:1px}
+
+.pick-hearts{display:flex;gap:2px}
+.pick-hearts button{border:0;background:none;padding:3px;cursor:pointer;border-radius:8px}
+.pick-hearts svg{width:28px;height:28px;display:block}
+.pick-hearts .on{color:var(--pink)}
+.pick-hearts .off{color:var(--line-strong)}
+
+.swatches{display:flex;flex-wrap:wrap;gap:8px}
+.swatches label{position:relative;cursor:pointer}
+.swatches input{position:absolute;opacity:0;width:1px;height:1px}
+.swatches span{
+  display:block;width:30px;height:30px;border-radius:9px;background:var(--sw);
+  box-shadow:var(--shadow);outline:3px solid transparent;outline-offset:2px;
+}
+.swatches input:checked + span{outline-color:var(--ink)}
+.swatches input:focus-visible + span{outline-color:var(--pink)}
+
+.hint{font-size:13.5px;color:var(--ink-soft)}
+.hint.first{background:var(--surface-2);border-radius:12px;padding:10px 14px;font-weight:600}
+.hint[hidden]{display:none}
+.form-msg{color:var(--pink-deep);font-weight:800;font-size:14px}
+.form-msg:empty{display:none}
+.form-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:flex-end}
+.form-actions .say{cursor:pointer}
+.del{
+  margin-right:auto;border:0;background:none;cursor:pointer;
+  font-family:var(--font-body);font-size:13px;font-weight:800;color:var(--pink-deep);
+  text-decoration:underline;padding:8px 0;
+}
+.del[hidden]{display:none}
+
+/* the little "Kaydedildi ✓" message at the bottom */
+.toast{
+  position:fixed;left:50%;bottom:24px;z-index:10;
+  transform:translateX(-50%) rotate(-1deg);
+  background:var(--ink);color:#fff;font-weight:800;font-size:14px;
+  padding:10px 22px;border-radius:999px;box-shadow:var(--shadow-lift);
+  opacity:0;pointer-events:none;transition:opacity .2s;
+}
+.toast.show{opacity:1}
+
+/* ============ EMPTY STATE + FOOTER ============ */
+
+section.empty{
+  text-align:center;border:3px dashed var(--line-strong);border-radius:var(--radius);
+  padding:54px 24px;display:grid;gap:12px;justify-items:center;background:var(--surface);
+}
+section.empty[hidden]{display:none}  /* only show "board is empty" when there really are no books */
+section.empty h2{font-family:var(--font-cut);font-weight:600;font-size:26px}
+section.empty p{color:var(--ink-soft);max-width:46ch}
+
+footer{
+  margin-top:66px;padding-top:26px;border-top:3px dotted var(--line-strong);
+  display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:center;
+  font-family:var(--font-hand);font-size:19px;font-weight:600;
+  color:var(--ink-faint);text-align:center;
+}
+
+/* ============ PHONE SIZES ============ */
+
+@media (max-width:620px){
+  .book{grid-template-columns:100px 1fr;gap:18px;padding:26px 18px 18px}
+  .book h3{font-size:21px}
+  .note{font-size:15.5px;padding:13px 16px}
+  .board{padding-block:34px 28px}
+  .rack-head h2{font-size:24px}
+  /* on a phone: small cover beside the title, the note uses the full card width */
+  .book,.two-racks .book{grid-template-columns:78px 1fr;gap:10px 16px;align-items:start}
+  .book-main{display:contents}
+  .book-main > *{grid-column:2}
+  .book .cover{grid-row:1 / span 3;padding:12px 8px 8px 13px}
+  .book .cover .c-title{font-size:11px}
+  .book .cover .c-author{font-size:8px}
+  .book-main > .note,.book-main > .card-actions,.book-main > .note-form{grid-column:1 / -1;margin-top:6px}
+  .note-form .form-row{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .form form{padding:30px 18px 20px}
+  .board{padding-top:58px}   /* room for the TR | EN switch */
+}
