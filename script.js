@@ -69,7 +69,7 @@
       nfSending:     "Gönderiliyor…",
       nfThanks:      "Teşekkürler! Notun bana ulaştı ♥",
       nfEmpty:       "Önce bir şey yaz.",
-      nfFailed:      "Gönderilemedi. İstersen e-posta ile yaz:",
+      nfFailed:      "Gönderilemedi. Birazdan tekrar dener misin?",
       mailSubject:   "Kitap kulübü: ",
       mailBody:      function (t) { return "Merhaba Semiha,\n\n" + t + " hakkında —\n\n"; },
       emptyHead:     "Pano henüz boş",
@@ -138,7 +138,7 @@
       nfSending:     "Sending…",
       nfThanks:      "Thank you! Your note reached me ♥",
       nfEmpty:       "Write something first.",
-      nfFailed:      "Couldn't send it. You can email me instead:",
+      nfFailed:      "Couldn't send it. Could you try again in a moment?",
       mailSubject:   "Book club: ",
       mailBody:      function (t) { return "Hi Semiha,\n\nAbout " + t + " —\n\n"; },
       emptyHead:     "The board is still empty",
@@ -398,12 +398,7 @@
         form.textContent = "";
         form.appendChild(node("p", "thanks", w().nfThanks));
       } catch (err) {
-        status.textContent = w().nfFailed + " ";
-        var link = node("a", null, MY_EMAIL);
-        link.href = "mailto:" + MY_EMAIL +
-          "?subject=" + encodeURIComponent(w().mailSubject + titleOf(book)) +
-          "&body=" + encodeURIComponent(msg.value.trim() || w().mailBody(titleOf(book)));
-        status.appendChild(link);
+        status.textContent = w().nfFailed;
         send.disabled = false;
         send.textContent = w().nfSend;
       }
