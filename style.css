@@ -131,6 +131,15 @@ a{color:var(--pink-deep)}
 .ltr:nth-child(3n+3){transform:rotate(-1.5deg);border-radius:16px 8px 14px 8px}
 .ltr:nth-child(4n){transform:rotate(5deg)}
 
+/* the club's name, a little sticker under BOOK CLUB */
+.club-name{
+  font-family:var(--font-cut);font-weight:600;font-size:clamp(18px,3.4vw,24px);
+  letter-spacing:.02em;line-height:1;color:#fff;background:var(--ink);
+  padding:10px 20px 11px;border-radius:999px;box-shadow:var(--shadow);
+  transform:rotate(-2deg);
+}
+.club-name span{color:var(--butter);margin-left:.2em}
+
 .lede{
   max-width:50ch;color:var(--ink-soft);font-size:16.5px;
   background:var(--surface);border-radius:18px;padding:14px 20px;

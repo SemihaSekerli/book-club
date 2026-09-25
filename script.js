@@ -44,7 +44,7 @@
 
   var WORDS = {
     tr: {
-      pageTitle:     "Dr. Semiha Sekerli'nin Kitap Kulübü",
+      pageTitle:     "Booksandthecity NYC — Dr. Semiha Sekerli'nin Kitap Kulübü",
       nameTape:      "Dr. Semiha Sekerli'nin",
       lede:          "Okuduğum kitaplar, bitirdiklerim ve her birinin bende bıraktıkları. Sen onları farklı görebilirsin — işin güzel yanı da bu. Sen ne gördün, anlat bana.",
       rack_reading:  "Şu an okuyorum",
@@ -75,7 +75,7 @@
       emptyHead:     "Pano henüz boş",
       emptyText:     "“+ Kitap ekle” butonuna bas ve ilk kitabını ekle.",
       footerKept:    "Dr. Semiha B. Sekerli tarafından tutuluyor",
-      joinHead:      "Kulübe katıl",
+      joinHead:      "Booksandthecity NYC'ye katıl",
       joinAbout:     "Bu kulüp, okumayı ve fikirlerini paylaşmayı seven kitap kurtları için. Her kitabı bitirdiğimde ne düşündüğümü sana yazacağım.",
       joinText:      "Yeni bir kitaba başladığımda, bitirdiğimde ya da bir buluşma olduğunda sana haber vereyim.",
       joinName:      "Adın",
@@ -113,7 +113,7 @@
       saveFailed:    "Kaydedilemedi: "
     },
     en: {
-      pageTitle:     "Dr. Semiha Sekerli's Book Club",
+      pageTitle:     "Booksandthecity NYC — Dr. Semiha Sekerli's Book Club",
       nameTape:      "Dr. Semiha Sekerli's",
       lede:          "The books I'm reading, the ones I've finished, and what each of them left me with. You'll see them differently — that's the good part. Tell me what you saw.",
       rack_reading:  "Currently reading",
@@ -144,7 +144,7 @@
       emptyHead:     "The board is still empty",
       emptyText:     "Press “+ Add a book” to put your first book on the board.",
       footerKept:    "Kept by Dr. Semiha B. Sekerli",
-      joinHead:      "Join the club",
+      joinHead:      "Join Booksandthecity NYC",
       joinAbout:     "This club is for book nerds who love to read, share ideas, and talk books together. Every time I finish a book, I'll send you what I thought about it.",
       joinText:      "I'll let you know when I start a new book, finish one, or when we meet up.",
       joinName:      "Your name",
