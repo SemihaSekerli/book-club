@@ -94,6 +94,7 @@
             <div class="tally" id="tally"></div>
 
             <button type="button" class="add" id="addBtn" data-i18n="add" hidden></button>
+            <a class="join-cta" id="joinCta" href="#join" data-i18n="joinCta" hidden></a>
         </header>
 
         <!-- ============ THE BOOKS ============ -->
@@ -104,6 +105,24 @@
             <svg width="38" height="38" viewBox="0 0 24 24" aria-hidden="true" style="color:var(--line-strong)"><use href="#hrt-o"></use></svg>
             <h2 data-i18n="emptyHead"></h2>
             <p data-i18n="emptyText"></p>
+        </section>
+
+        <!-- ============ JOIN THE CLUB (Mailchimp) ============ -->
+        <!-- Hidden until the Mailchimp link is filled in at the top of script.js -->
+        <section class="join" id="join" hidden>
+            <span class="tape" aria-hidden="true"></span>
+            <h2 data-i18n="joinHead"></h2>
+            <p class="join-text" data-i18n="joinText"></p>
+            <form id="joinForm" novalidate>
+                <div class="join-row">
+                    <label class="field"><span data-i18n="joinName"></span><input type="text" id="joinName" autocomplete="given-name"></label>
+                    <label class="field"><span data-i18n="joinEmail"></span><input type="email" id="joinEmail" autocomplete="email"></label>
+                    <button type="submit" class="add" id="joinBtn" data-i18n="joinSend"></button>
+                </div>
+                <input type="text" class="honey" id="joinHoney" tabindex="-1" autocomplete="off" aria-hidden="true">
+                <p class="hint" data-i18n="joinSmall"></p>
+                <p class="form-msg" id="joinMsg" role="status"></p>
+            </form>
         </section>
 
         <footer>

@@ -366,6 +366,34 @@ dialog.form::backdrop{background:rgba(59,40,49,.38)}
 }
 .toast.show{opacity:1}
 
+/* ============ JOIN THE CLUB (Mailchimp sign-up) ============ */
+
+.join-cta{
+  font-family:var(--font-hand);font-size:22px;font-weight:700;color:var(--pink-deep);
+  text-decoration:none;transform:rotate(1.5deg);
+}
+.join-cta:hover{text-decoration:underline}
+.join-cta[hidden]{display:none}
+
+.join{
+  position:relative;margin-top:56px;scroll-margin-top:24px;
+  background:var(--surface);border:1.5px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:38px 28px 26px;display:grid;gap:12px;
+  transform:rotate(-.4deg);
+}
+.join[hidden]{display:none}
+.join > .tape{top:-10px;left:50%;width:110px;height:22px;transform:translateX(-50%) rotate(2deg)}
+.join h2{
+  justify-self:start;font-family:var(--font-hand);font-weight:700;font-size:30px;line-height:1;
+  background:repeating-linear-gradient(45deg,var(--tape) 0 8px,var(--tape-2) 8px 16px);
+  padding:8px 20px 6px;border-radius:3px;transform:rotate(-1.4deg);
+}
+.join-text{color:var(--ink-soft);max-width:60ch}
+.join form{display:grid;gap:10px}
+.join-row{display:grid;grid-template-columns:1fr 1.4fr auto;gap:14px;align-items:end}
+.join-row .add{padding:11px 28px}
+@media (max-width:620px){.join-row{grid-template-columns:1fr}.join-row .add{justify-self:start}}
+
 /* ============ EMPTY STATE + FOOTER ============ */
 
 section.empty{

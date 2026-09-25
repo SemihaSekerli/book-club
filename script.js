@@ -19,6 +19,10 @@
   // Your email — the "Tell me what you thought" buttons open a message to this.
   var MY_EMAIL = "semihasekerlii@gmail.com";
 
+  // Your Mailchimp sign-up link (from Mailchimp: Audience -> Signup forms -> Embedded forms).
+  // While it is empty, the "Join the club" box stays hidden.
+  var MAILCHIMP_URL = "https://github.us11.list-manage.com/subscribe/post?u=f16ad6d193a93a4a9e7eb9b99&amp;id=b3c309fdb7&amp;f_id=00a0c2e1f0";
+
   // The three shelves, in the order they appear down the page.
   var RACKS = ["reading", "finished", "soon"];
 
@@ -65,11 +69,22 @@
       nfSending:     "Gönderiliyor…",
       nfThanks:      "Teşekkürler! Notun bana ulaştı ♥",
       nfEmpty:       "Önce bir şey yaz.",
-      nfFailed:      "Gönderilemedi. İstersen e-posta ile yaz:",      mailSubject:   "Kitap kulübü: ",
+      nfFailed:      "Gönderilemedi. İstersen e-posta ile yaz:",
+      mailSubject:   "Kitap kulübü: ",
       mailBody:      function (t) { return "Merhaba Semiha,\n\n" + t + " hakkında —\n\n"; },
       emptyHead:     "Pano henüz boş",
       emptyText:     "“+ Kitap ekle” butonuna bas ve ilk kitabını ekle.",
       footerKept:    "Dr. Semiha B. Sekerli tarafından tutuluyor",
+      joinHead:      "Kulübe katıl",
+      joinText:      "Yeni bir kitaba başladığımda, bitirdiğimde ya da bir buluşma olduğunda sana haber vereyim.",
+      joinName:      "Adın",
+      joinEmail:     "E-postan",
+      joinSend:      "Katıl",
+      joinSmall:     "Ayda en fazla birkaç e-posta. İstediğin zaman tek tıkla ayrılabilirsin.",
+      joinThanks:    "Hoş geldin, artık kulüptesin ♥ (E-postana bir onay maili gelirse oradaki butona basman yeterli.)",
+      joinBadEmail:  "E-posta adresini kontrol eder misin?",
+      joinFailed:    "Bir şeyler ters gitti, birazdan tekrar dener misin?",
+      joinCta:       "Kulübe katıl ↓",
       footerHearts:  "Kalpler sadece bir kitabın bana nasıl dokunduğunu gösterir — sana bambaşka dokunabilir",
       add:           "+ Kitap ekle",
       edit:          "Düzenle",
@@ -122,11 +137,22 @@
       nfSending:     "Sending…",
       nfThanks:      "Thank you! Your note reached me ♥",
       nfEmpty:       "Write something first.",
-      nfFailed:      "Couldn't send it. You can email me instead:",      mailSubject:   "Book club: ",
+      nfFailed:      "Couldn't send it. You can email me instead:",
+      mailSubject:   "Book club: ",
       mailBody:      function (t) { return "Hi Semiha,\n\nAbout " + t + " —\n\n"; },
       emptyHead:     "The board is still empty",
       emptyText:     "Press “+ Add a book” to put your first book on the board.",
       footerKept:    "Kept by Dr. Semiha B. Sekerli",
+      joinHead:      "Join the club",
+      joinText:      "I'll let you know when I start a new book, finish one, or when we meet up.",
+      joinName:      "Your name",
+      joinEmail:     "Your email",
+      joinSend:      "Join",
+      joinSmall:     "A few emails a month at most. Leave any time with one click.",
+      joinThanks:    "Welcome, you're in the club ♥ (If a confirmation email arrives, just click the button in it.)",
+      joinBadEmail:  "Could you check your email address?",
+      joinFailed:    "Something went wrong — could you try again in a moment?",
+      joinCta:       "Join the club ↓",
       footerHearts:  "Hearts are just how a book landed for me — yours may land somewhere else entirely",
       add:           "+ Add a book",
       edit:          "Edit",
@@ -752,6 +778,67 @@
     "];",
     ""
   ].join("\n");
+
+  /* ============================================================
+     6. JOIN THE CLUB — sends name + email to your Mailchimp list.
+     Mailchimp keeps the list, sends your update emails, and adds
+     the "unsubscribe" link to every email for you.
+     ============================================================ */
+
+  var joinEl   = document.getElementById("join");
+  var joinCta  = document.getElementById("joinCta");
+  var joinForm = document.getElementById("joinForm");
+  var joinName = document.getElementById("joinName");
+  var joinMail = document.getElementById("joinEmail");
+  var joinBtn  = document.getElementById("joinBtn");
+  var joinMsg  = document.getElementById("joinMsg");
+
+  if (MAILCHIMP_URL) {
+    joinEl.hidden = false;
+    joinCta.hidden = false;
+  }
+
+  joinForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var email = joinMail.value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { joinMsg.textContent = w().joinBadEmail; joinMail.focus(); return; }
+    if (document.getElementById("joinHoney").value) return;   // a spam robot filled the trap box
+
+    joinBtn.disabled = true;
+    joinMsg.textContent = "";
+
+    // Mailchimp's form link, changed to the version that answers back to the page
+    var params = new URL(MAILCHIMP_URL.replace(/&amp;/g, "&")).searchParams;
+    var callback = "bookclubJoin" + Date.now();
+    var src = MAILCHIMP_URL.replace(/&amp;/g, "&").replace("/post?", "/post-json?") +
+      "&EMAIL=" + encodeURIComponent(email) +
+      "&FNAME=" + encodeURIComponent(joinName.value.trim()) +
+      "&b_" + params.get("u") + "_" + params.get("id") + "=" +
+      "&c=" + callback;
+
+    var tag = document.createElement("script");
+    var timer = setTimeout(function () { done({ result: "error" }); }, 12000);
+    function done(res) {
+      clearTimeout(timer);
+      delete window[callback];
+      tag.remove();
+      joinBtn.disabled = false;
+      var msg = String((res && res.msg) || "");
+      if (res && res.result === "success") {
+        joinForm.textContent = "";
+        joinForm.appendChild(node("p", "thanks", w().joinThanks));
+      } else if (/already subscribed/i.test(msg)) {
+        joinForm.textContent = "";
+        joinForm.appendChild(node("p", "thanks", w().joinThanks));
+      } else {
+        joinMsg.textContent = /email|e-mail/i.test(msg) ? w().joinBadEmail : w().joinFailed;
+      }
+    }
+    window[callback] = done;
+    tag.src = src;
+    tag.onerror = function () { done({ result: "error" }); };
+    document.body.appendChild(tag);
+  });
 
   // Show the "first time" help in the form until a folder has been chosen.
   if (canEdit) {
