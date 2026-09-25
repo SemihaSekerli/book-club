@@ -16,8 +16,9 @@
 (function () {
   "use strict";
 
-  // Your email — the "Tell me what you thought" buttons open a message to this.
-  var MY_EMAIL = "semihasekerlii@gmail.com";
+  // Where readers' private notes are sent: FormSubmit's code for your Gmail
+  // (a stand-in, so your email address never appears in the page).
+  var NOTES_CODE = "57292da291039cbf77f1dd08b8763b46";
 
   // Your Mailchimp sign-up link (from Mailchimp: Audience -> Signup forms -> Embedded forms).
   // While it is empty, the "Join the club" box stays hidden.
@@ -378,7 +379,7 @@
       send.textContent = w().nfSending;
       status.textContent = "";
       try {
-        var res = await fetch("https://formsubmit.co/ajax/" + MY_EMAIL, {
+        var res = await fetch("https://formsubmit.co/ajax/" + NOTES_CODE, {
           method: "POST",
           headers: { "Content-Type": "application/json", "Accept": "application/json" },
           body: JSON.stringify({
