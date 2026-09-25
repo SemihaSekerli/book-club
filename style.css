@@ -388,6 +388,7 @@ dialog.form::backdrop{background:rgba(59,40,49,.38)}
   background:repeating-linear-gradient(45deg,var(--tape) 0 8px,var(--tape-2) 8px 16px);
   padding:8px 20px 6px;border-radius:3px;transform:rotate(-1.4deg);
 }
+.join-about{font-size:17px;line-height:1.6;color:var(--ink);max-width:62ch}
 .join-text{color:var(--ink-soft);max-width:60ch}
 .join form{display:grid;gap:10px}
 .join-row{display:grid;grid-template-columns:1fr 1.4fr auto;gap:14px;align-items:end}
