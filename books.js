@@ -539,50 +539,6 @@ const BOOKS = [
   },
 
   {
-    title:  "Introduction to Leadership",
-    titleEn: "",
-    author: "Peter G. Northouse",
-    status: "finished",
-    hearts: 0,
-    colour: "lilac",
-    note:   "",
-    noteEn: ""
-  },
-
-  {
-    title:  "Leadership: Theory and Practice",
-    titleEn: "",
-    author: "Peter G. Northouse",
-    status: "finished",
-    hearts: 0,
-    colour: "coral",
-    note:   "",
-    noteEn: ""
-  },
-
-  {
-    title:  "The Politics of Crisis Management",
-    titleEn: "",
-    author: "Boin, 't Hart, Stern & Sundelius",
-    status: "finished",
-    hearts: 0,
-    colour: "ink",
-    note:   "",
-    noteEn: ""
-  },
-
-  {
-    title:  "Good Work If You Can Get It",
-    titleEn: "",
-    author: "Jason Brennan",
-    status: "finished",
-    hearts: 0,
-    colour: "blush",
-    note:   "",
-    noteEn: ""
-  },
-
-  {
     title:  "Kur'an-ı Kerim'i Anlamak",
     titleEn: "",
     author: "İbn Arabi",
@@ -677,17 +633,6 @@ const BOOKS = [
     status: "finished",
     hearts: 0,
     colour: "butter",
-    note:   "",
-    noteEn: ""
-  },
-
-  {
-    title:  "Writing Your Dissertation in Fifteen Minutes a Day",
-    titleEn: "",
-    author: "Joan Bolker",
-    status: "finished",
-    hearts: 0,
-    colour: "mint",
     note:   "",
     noteEn: ""
   },
@@ -814,17 +759,6 @@ const BOOKS = [
   },
 
   {
-    title:  "The 21 Irrefutable Laws of Leadership",
-    titleEn: "",
-    author: "John C. Maxwell",
-    status: "finished",
-    hearts: 0,
-    colour: "ink",
-    note:   "",
-    noteEn: ""
-  },
-
-  {
     title:  "Breaking Night",
     titleEn: "",
     author: "Liz Murray",
@@ -875,17 +809,6 @@ const BOOKS = [
     status: "finished",
     hearts: 0,
     colour: "sky",
-    note:   "",
-    noteEn: ""
-  },
-
-  {
-    title:  "How to Win Friends & Influence People",
-    titleEn: "",
-    author: "Dale Carnegie",
-    status: "finished",
-    hearts: 0,
-    colour: "lilac",
     note:   "",
     noteEn: ""
   },
@@ -1023,17 +946,6 @@ const BOOKS = [
   },
 
   {
-    title:  "You Are Psychic!",
-    titleEn: "",
-    author: "Pete A. Sanders Jr.",
-    status: "finished",
-    hearts: 0,
-    colour: "butter",
-    note:   "",
-    noteEn: ""
-  },
-
-  {
     title:  "İnsan Var mısın?",
     titleEn: "",
     author: "Doğan Cüceloğlu",
@@ -1106,17 +1018,6 @@ const BOOKS = [
     status: "finished",
     hearts: 0,
     colour: "pink",
-    note:   "",
-    noteEn: ""
-  },
-
-  {
-    title:  "Develop Your Psychic Abilities",
-    titleEn: "",
-    author: "Litany Burns",
-    status: "finished",
-    hearts: 0,
-    colour: "butter",
     note:   "",
     noteEn: ""
   },
@@ -1524,17 +1425,6 @@ const BOOKS = [
     status: "finished",
     hearts: 0,
     colour: "blush",
-    note:   "",
-    noteEn: ""
-  },
-
-  {
-    title:  "İki Şehveti Dizginlemek",
-    titleEn: "",
-    author: "İmam-ı Gazali",
-    status: "finished",
-    hearts: 0,
-    colour: "pink",
     note:   "",
     noteEn: ""
   },
