@@ -264,17 +264,6 @@ const BOOKS = [
   },
 
   {
-    title:  "How to Talk to Anyone",
-    titleEn: "",
-    author: "Leil Lowndes",
-    status: "finished",
-    hearts: 0,
-    colour: "ink",
-    note:   "",
-    noteEn: ""
-  },
-
-  {
     title:  "Daring Greatly",
     titleEn: "",
     author: "Brené Brown",
