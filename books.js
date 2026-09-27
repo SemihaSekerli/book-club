@@ -98,6 +98,424 @@ const BOOKS = [
     noteEn: "I’ve heard so much about this book that, of course, I had to add it to my reading list.\n\nI believe that once we realize we don’t exist in this life as just one single version of ourselves, it brings an incredible sense of relief even though that idea may seem like a paradox at first.\nI’m really curious to see where this book takes me, and I can’t wait to find out how it ends."
   },
 
+  {
+    title:  "How to Stop Time",
+    titleEn: "",
+    author: "Matt Haig",
+    status: "finished",
+    hearts: 0,
+    colour: "pink",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Notes on a Nervous Planet",
+    titleEn: "",
+    author: "Matt Haig",
+    status: "finished",
+    hearts: 0,
+    colour: "butter",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "The Last Family in England",
+    titleEn: "",
+    author: "Matt Haig",
+    status: "finished",
+    hearts: 0,
+    colour: "mint",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Gece Yarısı Kütüphanesi",
+    titleEn: "The Midnight Library",
+    author: "Matt Haig",
+    status: "finished",
+    hearts: 0,
+    colour: "sky",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Ikigai",
+    titleEn: "",
+    author: "Héctor García & Francesc Miralles",
+    status: "finished",
+    hearts: 0,
+    colour: "lilac",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Atomic Habits",
+    titleEn: "",
+    author: "James Clear",
+    status: "finished",
+    hearts: 0,
+    colour: "coral",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "We Have a Deal",
+    titleEn: "",
+    author: "Natalie Reynolds",
+    status: "finished",
+    hearts: 0,
+    colour: "ink",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Grit",
+    titleEn: "",
+    author: "Angela Duckworth",
+    status: "finished",
+    hearts: 0,
+    colour: "blush",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "She Has Her Mother's Laugh",
+    titleEn: "",
+    author: "Carl Zimmer",
+    status: "finished",
+    hearts: 0,
+    colour: "pink",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "The Heart-Led Leader",
+    titleEn: "",
+    author: "Tommy Spaulding",
+    status: "finished",
+    hearts: 0,
+    colour: "butter",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Emotional Intelligence",
+    titleEn: "",
+    author: "Daniel Goleman",
+    status: "finished",
+    hearts: 0,
+    colour: "mint",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "The First 90 Days",
+    titleEn: "",
+    author: "Michael D. Watkins",
+    status: "finished",
+    hearts: 0,
+    colour: "sky",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Moral Ground",
+    titleEn: "",
+    author: "Kathleen Dean Moore & Michael P. Nelson (eds.)",
+    status: "finished",
+    hearts: 0,
+    colour: "lilac",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Mobius",
+    titleEn: "",
+    author: "Adam Fawer",
+    status: "finished",
+    hearts: 0,
+    colour: "coral",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Gönül",
+    titleEn: "",
+    author: "İskender Pala",
+    status: "finished",
+    hearts: 0,
+    colour: "mint",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "How to Talk to Anyone",
+    titleEn: "",
+    author: "Leil Lowndes",
+    status: "finished",
+    hearts: 0,
+    colour: "ink",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Daring Greatly",
+    titleEn: "",
+    author: "Brené Brown",
+    status: "finished",
+    hearts: 0,
+    colour: "blush",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "The DOSE Effect",
+    titleEn: "",
+    author: "T. J. Power",
+    status: "finished",
+    hearts: 0,
+    colour: "pink",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Skipshock",
+    titleEn: "",
+    author: "Caroline O'Donoghue",
+    status: "soon",
+    hearts: 0,
+    colour: "butter",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Beni Asla Bırakma",
+    titleEn: "Never Let Me Go",
+    author: "Kazuo Ishiguro",
+    status: "soon",
+    hearts: 0,
+    colour: "mint",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Seyir",
+    titleEn: "",
+    author: "Piraye",
+    status: "soon",
+    hearts: 0,
+    colour: "lilac",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Kupa Sevgili",
+    titleEn: "",
+    author: "Lily King",
+    status: "soon",
+    hearts: 0,
+    colour: "coral",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Esme Lennox Nasıl Yok Oldu",
+    titleEn: "The Vanishing Act of Esme Lennox",
+    author: "Maggie O'Farrell",
+    status: "soon",
+    hearts: 0,
+    colour: "ink",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Gece Yarısı Treni",
+    titleEn: "",
+    author: "Matt Haig",
+    status: "soon",
+    hearts: 0,
+    colour: "blush",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Sonsuz Olasılıklar",
+    titleEn: "Infinite Possibilities",
+    author: "Mike Dooley",
+    status: "soon",
+    hearts: 0,
+    colour: "pink",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Sen Hâlâ Annenin Kızısın",
+    titleEn: "",
+    author: "Çağla Şıkel",
+    status: "soon",
+    hearts: 0,
+    colour: "butter",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Annenin Duygusal Yokluğu",
+    titleEn: "The Emotionally Absent Mother",
+    author: "Jasmin Lee Cori",
+    status: "soon",
+    hearts: 0,
+    colour: "mint",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Asılacak Kadın",
+    titleEn: "",
+    author: "Pınar Kür",
+    status: "soon",
+    hearts: 0,
+    colour: "sky",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Geri Verilen Kız",
+    titleEn: "A Girl Returned",
+    author: "Donatella Di Pietrantonio",
+    status: "soon",
+    hearts: 0,
+    colour: "lilac",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Sıfır Noktasındaki Kadın",
+    titleEn: "Woman at Point Zero",
+    author: "Neval El Seddavi",
+    status: "soon",
+    hearts: 0,
+    colour: "coral",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Mumlar Sonuna Kadar Yanar",
+    titleEn: "Embers",
+    author: "Sándor Márai",
+    status: "soon",
+    hearts: 0,
+    colour: "ink",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Kahve Soğumadan Önce: Kafeden Hikâyeler",
+    titleEn: "Tales from the Cafe",
+    author: "Toshikazu Kawaguchi",
+    status: "soon",
+    hearts: 0,
+    colour: "blush",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Kaçırdıklarımız",
+    titleEn: "Missing Out",
+    author: "Adam Phillips",
+    status: "soon",
+    hearts: 0,
+    colour: "pink",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Gizli Bahçe",
+    titleEn: "The Secret Garden",
+    author: "Frances Hodgson Burnett",
+    status: "soon",
+    hearts: 0,
+    colour: "butter",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Vazgeçmek Üzerine",
+    titleEn: "On Giving Up",
+    author: "Adam Phillips",
+    status: "soon",
+    hearts: 0,
+    colour: "mint",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Yaratma Cesareti",
+    titleEn: "The Courage to Create",
+    author: "Rollo May",
+    status: "soon",
+    hearts: 0,
+    colour: "sky",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Malma İstasyonu",
+    titleEn: "Malma Station",
+    author: "Alex Schulman",
+    status: "soon",
+    hearts: 0,
+    colour: "lilac",
+    note:   "",
+    noteEn: ""
+  },
+
+  {
+    title:  "Büyü Dükkânı",
+    titleEn: "",
+    author: "Yeşim Taş Türköz",
+    status: "soon",
+    hearts: 0,
+    colour: "coral",
+    note:   "",
+    noteEn: ""
+  },
+
   // ---- copy from here ----
   // {
   //   title:  "",
