@@ -1232,17 +1232,6 @@ const BOOKS = [
   },
 
   {
-    title:  "Get the Guy",
-    titleEn: "",
-    author: "Matthew Hussey",
-    status: "finished",
-    hearts: 0,
-    colour: "lilac",
-    note:   "",
-    noteEn: ""
-  },
-
-  {
     title:  "Beni İncitemezsin",
     titleEn: "",
     author: "Müthiş Psikoloji",
