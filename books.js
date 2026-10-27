@@ -44,7 +44,7 @@
 const BOOKS = [
 
   {
-    title:  "Kahve Soğumadan Önce",
+    title:  "Kahve Soğumadan Önce 1",
     titleEn: "Before the Coffee Gets Cold",
     author: "Toshikazu Kawaguchi",
     status: "finished",
@@ -94,8 +94,8 @@ const BOOKS = [
     status: "finished",
     hearts: 3,
     colour: "sky",
-    note:   "Bu Kitapla ilgili benim dusuncelerim populer dusunceden biraz farkli oldu \n\n\nHer şey küçücük bir anla başlıyor: Moscarda’nın karısının, burnunun eğri olduğunu söylemesiyle… Kendinde hiç fark etmediği bu ayrıntı, insanların onu kendi gördüğünden ne kadar farklı gördüğünü sorgulamasına neden oluyor.\n\nKendi gözünde biri, başkalarının gözünde binlercesi… Peki, bütün bu farklı kişilerin arasında kendisi kim? Belki de hiçbiri.\n\nBu sorgulama giderek kendine, hayata ve insanlara baktığı felsefi bir yolculuğa dönüşüyor. Yalnızlık üzerine düşündürdükleri de oldukça çarpıcı. Tek başına olmak gerçekten yalnız olmak için yeterli mi? Yoksa asıl yalnızlık, sizi tanımayan, anlamayan, sizinle konuşmayan birinin yanında olmak mı? Peki, o kişinin kendiniz olduğunu fark ederseniz?\n\nEvet, kitapta bütün bunlar var. Amaaaaa… Benim için okuma deneyimi, konusunun yarattığı heyecanın çok gerisinde kaldı. 🙈\n\nAnlatımını o kadar melankolik buldum ki bir noktadan sonra sırf bitsin diye sayfalar arasında kendimi sürükleyerek ilerledim. Sonunda da okumayı bıraktım.\n\nAçıkçası, bu kadar çok kişinin kitabı okuyup böylesine sevmiş olmasına biraz şaşırdım. Acaba bazıları yalnızca konusundan etkilenip “hayatımı değiştiren kitap” diye paylaşıyor olabilir mi diye düşünmedim değil. Elbette bu benim deneyimim; aynı kitap başka bir okurda bambaşka bir yere dokunabilir.",
-    noteEn: "I saw Luigi Pirandello's One, No One and One Hundred Thousand on so many bookstagram pages that I added it to the list of 35 books I ordered from Turkey. As soon as the books arrived, it was the first one I picked up. Because just think about it: the premise is brilliant!\n\nIt all starts with a tiny moment, when Moscarda's wife tells him that his nose is crooked… This small detail, one he had never noticed in himself, makes him question how differently other people see him from the way he sees himself.\n\nOne person in his own eyes, a hundred thousand in the eyes of others… So among all these different people, who is he? Perhaps no one.\n\nThis questioning gradually becomes a philosophical journey through which he looks at himself, at life and at people. What it makes you think about loneliness is striking too. Is being alone really enough to be lonely? Or is true loneliness being next to someone who doesn't know you, doesn't understand you, doesn't talk to you? And what if you realize that person is you?\n\nYes, all of this is in the book. Buuuuut… for me, the reading experience fell far short of the excitement its premise created. 🙈\n\nI found the writing so melancholic that after a certain point I was dragging myself through the pages just to get it over with. In the end, I stopped reading.\n\nHonestly, I was a little surprised that so many people had read this book and loved it so much. I couldn't help wondering whether some of them might be sharing it as \"the book that changed my life\" just because they were taken by its premise. Of course, this is only my experience; the same book might touch another reader in a completely different place."
+    note:   "",
+    noteEn: ""
   },
 
   {
@@ -429,7 +429,7 @@ const BOOKS = [
   },
 
   {
-    title:  "Kahve Soğumadan Önce: Kafeden Hikâyeler",
+    title:  "Kahve Soğumadan Önce 2: Kafeden Hikâyeler",
     titleEn: "Tales from the Cafe",
     author: "Toshikazu Kawaguchi",
     status: "finished",
