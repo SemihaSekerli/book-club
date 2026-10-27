@@ -103,7 +103,7 @@ const BOOKS = [
     titleEn: "",
     author: "Matt Haig",
     status: "finished",
-    hearts: 0,
+    hearts: 4,
     colour: "pink",
     note:   "",
     noteEn: ""
@@ -114,7 +114,7 @@ const BOOKS = [
     titleEn: "",
     author: "Matt Haig",
     status: "finished",
-    hearts: 0,
+    hearts: 4,
     colour: "butter",
     note:   "",
     noteEn: ""
@@ -136,7 +136,7 @@ const BOOKS = [
     titleEn: "The Midnight Library",
     author: "Matt Haig",
     status: "finished",
-    hearts: 0,
+    hearts: 5,
     colour: "sky",
     note:   "",
     noteEn: ""
@@ -147,7 +147,7 @@ const BOOKS = [
     titleEn: "",
     author: "Héctor García & Francesc Miralles",
     status: "finished",
-    hearts: 0,
+    hearts: 5,
     colour: "lilac",
     note:   "",
     noteEn: ""
@@ -158,7 +158,7 @@ const BOOKS = [
     titleEn: "",
     author: "James Clear",
     status: "finished",
-    hearts: 0,
+    hearts: 3,
     colour: "coral",
     note:   "",
     noteEn: ""
@@ -180,7 +180,7 @@ const BOOKS = [
     titleEn: "",
     author: "Angela Duckworth",
     status: "finished",
-    hearts: 0,
+    hearts: 5,
     colour: "blush",
     note:   "",
     noteEn: ""
@@ -202,7 +202,7 @@ const BOOKS = [
     titleEn: "",
     author: "Tommy Spaulding",
     status: "finished",
-    hearts: 0,
+    hearts: 5,
     colour: "butter",
     note:   "",
     noteEn: ""
@@ -279,7 +279,7 @@ const BOOKS = [
     titleEn: "",
     author: "T. J. Power",
     status: "finished",
-    hearts: 0,
+    hearts: 5,
     colour: "pink",
     note:   "",
     noteEn: ""
@@ -565,7 +565,7 @@ const BOOKS = [
     titleEn: "",
     author: "Metin Hara",
     status: "finished",
-    hearts: 0,
+    hearts: 5,
     colour: "sky",
     note:   "",
     noteEn: ""
