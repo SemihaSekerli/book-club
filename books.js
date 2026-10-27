@@ -44,10 +44,10 @@
 const BOOKS = [
 
   {
-    title:  "Kahve Sogumadan Once",
+    title:  "Kahve Soğumadan Önce",
     titleEn: "Before the Coffee Gets Cold",
     author: "Toshikazu Kawaguchi",
-    status: "reading",
+    status: "finished",
     hearts: 0,
     colour: "coral",
     note:   "",
@@ -344,7 +344,7 @@ const BOOKS = [
     title:  "Gece Yarısı Treni",
     titleEn: "",
     author: "Matt Haig",
-    status: "soon",
+    status: "reading",
     hearts: 0,
     colour: "blush",
     note:   "",
@@ -432,7 +432,7 @@ const BOOKS = [
     title:  "Kahve Soğumadan Önce: Kafeden Hikâyeler",
     titleEn: "Tales from the Cafe",
     author: "Toshikazu Kawaguchi",
-    status: "soon",
+    status: "finished",
     hearts: 0,
     colour: "blush",
     note:   "",
